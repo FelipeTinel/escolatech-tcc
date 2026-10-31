@@ -1,0 +1,16 @@
+# Copie para terraform.tfvars e ajuste
+aws_region   = "sa-east-1"
+project_name = "escola-tech"
+environment  = "prod"
+
+# HTTPS (ACM + Route 53). Sem domínio para testes: enable_https = false
+enable_https    = true
+domain_name     = "matriculas.exemplo.com.br"
+route53_zone_id = "Z0000000000000000000"
+
+instance_type        = "t4g.micro"
+app_port             = 8080
+health_check_path    = "/health"
+asg_min_size         = 2
+asg_max_size         = 4
+asg_desired_capacity = 2
